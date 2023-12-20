@@ -4,4 +4,4 @@ metadata:
   name: lan-services
 spec:
   addresses:
-  - 192.168.5.0/24
+  - 192.168.6.0/24
