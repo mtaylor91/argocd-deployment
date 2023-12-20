@@ -1,0 +1,43 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: istio-ingressgateway
+spec:
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 100%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      annotations:
+        prometheus.io/port: "15020"
+        prometheus.io/scrape: "true"
+        prometheus.io/path: "/stats/prometheus"
+        sidecar.istio.io/inject: "true"
+        inject.istio.io/templates: "gateway"
+      labels:
+        sidecar.istio.io/inject: "true"
+    spec:
+      serviceAccountName: istio-ingressgateway
+      containers:
+      - name: istio-proxy
+        image: auto
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+          name: http
+        - containerPort: 8443
+          protocol: TCP
+          name: https
+        - containerPort: 15021
+          protocol: TCP
+          name: status
+        resources:
+          limits:
+            cpu: 2000m
+            memory: 1024Mi
+          requests:
+            cpu: 100m
+            memory: 128Mi

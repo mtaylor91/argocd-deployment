@@ -1,0 +1,44 @@
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: home-mtaylor-io
+spec:
+  selector:
+    istio: ingressgateway-local
+  servers:
+  - port:
+      name: postgresql
+      number: 5432
+      protocol: TCP
+    hosts:
+    - '*'
+  - port:
+      name: rtmp
+      number: 1935
+      protocol: TCP
+    hosts:
+    - '*'
+  - port:
+      name: ssh
+      number: 2222
+      protocol: TCP
+    hosts:
+    - '*'
+  - port:
+      name: http
+      number: 80
+      protocol: HTTP
+    hosts:
+    - '*.home.mtaylor.io'
+    tls:
+      httpsRedirect: true
+  - port:
+      name: https
+      number: 443
+      protocol: HTTPS
+    hosts:
+    - '*.home.mtaylor.io'
+    tls:
+      mode: SIMPLE
+      credentialName: home-mtaylor-io-tls

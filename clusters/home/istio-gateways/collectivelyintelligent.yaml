@@ -1,0 +1,32 @@
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: collectively-intelligent
+spec:
+  selector:
+    istio: ingressgateway-public
+  servers:
+  - port:
+      name: http
+      number: 80
+      protocol: HTTP
+    hosts:
+    - 'collectivelyintelligent.ca'
+    - '*.collectivelyintelligent.ca'
+    - 'collectivelyintelligent.net'
+    - '*.collectivelyintelligent.net'
+    tls:
+      httpsRedirect: true
+  - port:
+      name: https
+      number: 443
+      protocol: HTTPS
+    hosts:
+    - 'collectivelyintelligent.ca'
+    - '*.collectivelyintelligent.ca'
+    - 'collectivelyintelligent.net'
+    - '*.collectivelyintelligent.net'
+    tls:
+      mode: SIMPLE
+      credentialName: collectively-intelligent-tls

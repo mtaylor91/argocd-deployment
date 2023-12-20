@@ -1,0 +1,9 @@
+namespace: istio-gateways
+resources:
+- ./gateways/local
+- ./gateways/public
+- certificates.yaml
+- collectivelyintelligent.yaml
+- crossmap-dev.yaml
+- home-mtaylor-io.yaml
+- mtaylor-io.yaml

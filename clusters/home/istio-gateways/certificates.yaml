@@ -1,0 +1,56 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: collectively-intelligent
+spec:
+  secretName: collectively-intelligent-tls
+  dnsNames:
+  - 'collectivelyintelligent.ca'
+  - '*.collectivelyintelligent.ca'
+  - 'collectivelyintelligent.net'
+  - '*.collectivelyintelligent.net'
+  issuerRef:
+    name: letsencrypt-prod-cloudflare
+    kind: ClusterIssuer
+    group: cert-manager.io
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: crossmap-dev
+spec:
+  secretName: crossmap-dev-tls
+  dnsNames:
+  - 'crossmap.dev'
+  - '*.crossmap.dev'
+  issuerRef:
+    name: letsencrypt-prod-cloudflare
+    kind: ClusterIssuer
+    group: cert-manager.io
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: home-mtaylor-io
+spec:
+  secretName: home-mtaylor-io-tls
+  dnsNames:
+  - '*.home.mtaylor.io'
+  issuerRef:
+    name: letsencrypt-prod-route53
+    kind: ClusterIssuer
+    group: cert-manager.io
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: mtaylor-io
+spec:
+  secretName: mtaylor-io-tls
+  dnsNames:
+  - '*.mtaylor.io'
+  issuerRef:
+    name: letsencrypt-prod-cloudflare
+    kind: ClusterIssuer
+    group: cert-manager.io

@@ -1,0 +1,9 @@
+commonLabels:
+  app: istio-ingressgateway
+  istio: ingressgateway
+resources:
+- deployment.yml
+- poddisruptionbudget.yml
+- horizontalpodautoscaler.yml
+- service.yml
+- rbac.yml

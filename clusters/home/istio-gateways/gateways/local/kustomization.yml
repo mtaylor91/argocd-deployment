@@ -1,0 +1,9 @@
+namespace: istio-gateways
+nameSuffix: -local
+commonLabels:
+  app: istio-ingressgateway-local
+  istio: ingressgateway-local
+patchesStrategicMerge:
+- service.yml
+resources:
+- ../../base

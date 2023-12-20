@@ -1,0 +1,7 @@
+namespace: istio-gateways
+nameSuffix: -public
+commonLabels:
+  app: istio-ingressgateway-public
+  istio: ingressgateway-public
+resources:
+- ../../base

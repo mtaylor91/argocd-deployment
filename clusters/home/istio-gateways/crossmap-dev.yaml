@@ -1,0 +1,28 @@
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: crossmap-dev
+spec:
+  selector:
+    istio: ingressgateway-public
+  servers:
+  - port:
+      name: http
+      number: 80
+      protocol: HTTP
+    hosts:
+    - 'crossmap.dev'
+    - '*.crossmap.dev'
+    tls:
+      httpsRedirect: true
+  - port:
+      name: https
+      number: 443
+      protocol: HTTPS
+    hosts:
+    - 'crossmap.dev'
+    - '*.crossmap.dev'
+    tls:
+      mode: SIMPLE
+      credentialName: crossmap-dev-tls
