@@ -1,0 +1,23 @@
+{
+  "kind": "SealedSecret",
+  "apiVersion": "bitnami.com/v1alpha1",
+  "metadata": {
+    "name": "cert-manager-dns01-route53",
+    "namespace": "cert-manager",
+    "creationTimestamp": null
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "name": "cert-manager-dns01-route53",
+        "namespace": "cert-manager",
+        "creationTimestamp": null
+      },
+      "type": "Opaque"
+    },
+    "encryptedData": {
+      "access-key": "AgB1/WIthuHOPS1oTZyFKGPW6bGVOknlV57LiiBzSNmPeNsZxvQb+qoyV7jpUhBqRz/5mNbdE1SKfh1T3MWa5ETT8oSfMy7R1kAOfVacC1lAkxMbkHAHbtCdb7I0JltmIQxRx2JXEZnuA1gH3Jgcj7tS7op0Dib08m1/RMwwKY6Uyb4e9HFpaNjk2VNjHIFpWwPD2Q435cYTkBCA+cMLfQ5eir81pDua9QKp7EGCbQuP2lQhJj6W6HLcns73Ts0Va9RdE79dw7ikL1SjwQwFanTQ95wVbHGx1xExxaznyF7iiOWiRhiJrnlkPdB+k54wmYokApESxQS/zKNZg0cA9On1ZPoGemKiOVCUm3sBwbvjDg8L37A/3VBp579QEvMDbxJx6XVhqWiNoAA6La3WmcK5ayHb/fbgGO5wYifwM1Ksyq7vmn1QQYQ7ZGskknk10imLTEqlRaLqNeyeCkQd6sOXyt+Ag9WwTYRQ9YL7gV9ot7HBionrAKTg6rgdAW6rO90+z6VVzEVMR1V3ZSat88RZbWMSl4REjDDazpLOvBUCWfBVHg0fnP9SjklAqhAjRQLK4vIWCTElPxbMrQuFXcZukkfkIwsfToHJwC46d/QpK3WIgRWl3AXMGPglEQuribIM/NXy9OTVITnDneCE868fmmg9wnl7G2VEZoJk9S6SPvv9byEr2zLyBOGhC9ep44jSTIW4/sShrV96Wek8mbsybZc/1w==",
+      "secret-access-key": "AgCgjzl+gXCxi4oKOP25UVKArjsjqfhV9+MnDZ3VytI6rZmZzzf410f5Cc3IGU7f90rB5fCFqMncYG1u0X6CM8H4ot4mquRoe1iQ76G0CEp2NswQWYIdC2Pa81jD84RwacOV2zqgliyDUexqo51I0Zcg0V+b31EaMm88KLFxs0UqqSBQbcWJBtGivg6wpQQrUihbEe9AO/HbCZopUn1eymLqGa2yuV1UAygPAdSQ1mKtc2eMyRgYL2jHcjjwDktqvdlLurPwT2kBJzdmNE1/SN65KWtJ5DIUK6J5GYpAro1pGkbnp6XF1uFQOdPstOAAWYm1EEAEVR2AHVIqKQYrmBxT++2sHoRzVL84osi8gPqqhyrJLGfz6wXb2+ShGzMfNhoZdNqJqyMK5nwRdytymvjfsy7zN06de42w5ud7x2y0iXqVMlO8ytg6DGoWF5B6IP+Wf2WePiUIC5k6cVNKzX2psaImbC5R9IJwVbFyHuKksichqS6WqX10//xG0MBDtonruWPY+FHMuXwH3gPSvvjLdQMb56UxjKWMEETAIBoArNaBT6GGOUGWBixuK60MXCWi/Gi4K5NqNgz0TrhMsD5bg9/7jzcN1QCkaVWxh2tRJQayIu4TLg3skrirb0QVpE4RT5QIhZEuNET1Q3kgmK4J8u/opM5Nbq++nysz36osZBVAUdOVCHkSNHkGYefttidJxLQ+2ltOYQ88e7OjGuOcEGqS8/yVA8IpcmXITle5WRGLToQniZHF"
+    }
+  }
+}
