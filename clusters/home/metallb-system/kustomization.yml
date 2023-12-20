@@ -1,6 +1,6 @@
 namespace: metallb-system
 resources:
-- https://raw.githubusercontent.com/metallb/metallb/v0.13.7/config/manifests/metallb-native-prometheus.yaml
+- https://raw.githubusercontent.com/metallb/metallb/v0.13.12/config/manifests/metallb-native-prometheus.yaml
 - bgpadvertisement.yml
 - bgppeerrouter.yml
 - ipaddresspool.yml
