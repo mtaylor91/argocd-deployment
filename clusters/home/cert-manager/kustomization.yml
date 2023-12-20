@@ -1,6 +1,4 @@
 namespace: cert-manager
 resources:
 - https://github.com/cert-manager/cert-manager/releases/download/v1.10.0/cert-manager.yaml
-- cert-manager-dns01-cloudflare.json
-- cert-manager-dns01-route53.json
-- cluster-issuers.yml
+- local

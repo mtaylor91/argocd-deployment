@@ -1,0 +1,4 @@
+resources:
+- cert-manager-dns01-cloudflare.json
+- cert-manager-dns01-route53.json
+- cluster-issuers.yml
