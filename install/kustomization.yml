@@ -1,0 +1,6 @@
+namespace: argocd
+resources:
+- namespace.yml
+- virtualservice.yml
+- destinationrule.yml
+- https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
