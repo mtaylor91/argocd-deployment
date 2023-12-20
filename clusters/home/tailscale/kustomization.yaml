@@ -1,0 +1,25 @@
+
+configurations:
+- sealedsecrets.yml
+
+commonLabels:
+  app: tailscale
+
+namespace: tailscale
+
+secretGenerator:
+- name: tailscale-auth
+  files:
+  - ./tailscale-auth.json
+  options:
+    annotations:
+      config.kubernetes.io/local-config: "true"
+
+resources:
+- ns.yaml
+- sa.yaml
+- role.yaml
+- rolebinding.yaml
+- statefulset.yaml
+- service.yaml
+- tailscale-auth.json

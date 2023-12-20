@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: router
+spec:
+  replicas: 1
+  serviceName: router
+  template:
+    spec:
+      serviceAccountName: tailscale
+      containers:
+      - name: tailscale
+        imagePullPolicy: Always
+        image: "ghcr.io/tailscale/tailscale:latest"
+        env:
+        - name: TS_KUBE_SECRET
+          value: "tailscale"
+        - name: TS_USERSPACE
+          value: "true"
+        - name: TS_AUTH_KEY
+          valueFrom:
+            secretKeyRef:
+              name: tailscale-auth
+              key: AUTH_KEY
+              optional: true
+        - name: TS_ROUTES
+          value: "192.168.0.0/16"
+        - name: TS_EXTRA_ARGS
+          value: "--advertise-exit-node"
+        - name: TS_TAILSCALED_EXTRA_ARGS
+          value: "--port 19918"
+        ports:
+        - containerPort: 19918
+          protocol: UDP
+        securityContext:
+          runAsUser: 1000
+          runAsGroup: 1000

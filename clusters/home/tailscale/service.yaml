@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: router
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 19918
+    protocol: UDP
