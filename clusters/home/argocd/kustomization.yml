@@ -1,4 +1,9 @@
 namespace: argocd
+configMapGenerator:
+- name: argocd-cm
+  behavior: merge
+  files:
+  - config/resource.exclusions
 resources:
 - applicationset.yml
 - ../../../argocd
