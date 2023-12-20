@@ -6,8 +6,10 @@ metadata:
 spec:
   gateways:
   - istio-gateways/home-mtaylor-io
+  - istio-gateways/mtaylor-io
   hosts:
   - argocd.home.mtaylor.io
+  - argocd.mtaylor.io
   http:
   - name: argocd-routes
     route:
