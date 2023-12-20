@@ -102,3 +102,4 @@ data:
       service: https://istio-ingressgateway-public.istio-gateways.svc.cluster.local
       originRequest:
         originServerName: systemloop.mtaylor.io
+    - service: http_status:503
