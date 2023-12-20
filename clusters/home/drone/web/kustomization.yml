@@ -1,0 +1,14 @@
+namespace: drone
+commonLabels:
+  service: web
+resources:
+- namespace.yml
+- deployment.yml
+- service.yml
+- virtualservice.yml
+- volume.yml
+- rbac.yml
+configMapGenerator:
+- name: drone-env
+secretGenerator:
+- name: drone-env-secret

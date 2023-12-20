@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kube-runner
+spec:
+  strategy:
+    type: Recreate
+  template:
+    spec:
+      containers:
+      - name: drone
+        image: docker.io/drone/drone-runner-kube:latest
+        envFrom:
+        - configMapRef:
+            name: drone-runner-env
+        - secretRef:
+            name: drone-runner-env-secret
+        ports:
+        - containerPort: 3000
+          protocol: TCP
+      serviceAccountName: kube-runner

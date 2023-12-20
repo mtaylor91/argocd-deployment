@@ -1,0 +1,10 @@
+namespace: drone
+commonLabels:
+  service: runner
+resources:
+- deployment.yml
+- rbac.yml
+configMapGenerator:
+- name: drone-runner-env
+secretGenerator:
+- name: drone-runner-env-secret

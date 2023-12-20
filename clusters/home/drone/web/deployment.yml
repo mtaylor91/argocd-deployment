@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: drone
+spec:
+  strategy:
+    type: Recreate
+  template:
+    spec:
+      containers:
+      - name: drone
+        image: docker.io/drone/drone:2.15
+        envFrom:
+        - configMapRef:
+            name: drone-env
+        - secretRef:
+            name: drone-env-secret
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        - containerPort: 443
+          protocol: TCP
+        volumeMounts:
+        - mountPath: /data
+          name: drone-data
+      - name: secrets
+        image: docker.io/drone/kubernetes-secrets:latest
+        env:
+        - name: DEBUG
+          value: "true"
+        - name: KUBERNETES_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        - name: SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: drone-env-secret
+              key: DRONE_SECRET_PLUGIN_TOKEN
+        ports:
+        - containerPort: 3000
+      serviceAccountName: drone
+      volumes:
+      - name: drone-data
+        persistentVolumeClaim:
+          claimName: drone-data

@@ -1,0 +1,17 @@
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: drone
+spec:
+  gateways:
+  - istio-gateways/mtaylor-io
+  hosts:
+  - drone.mtaylor.io
+  http:
+  - name: drone-routes
+    route:
+    - destination:
+        host: web.drone.svc.cluster.local
+        port:
+          number: 80

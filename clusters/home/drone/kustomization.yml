@@ -1,0 +1,38 @@
+
+configurations:
+- sealedsecrets.yml
+
+commonLabels:
+  app: drone
+
+configMapGenerator:
+- name: drone-env
+  behavior: merge
+  envs:
+  - env/drone.env
+- name: drone-runner-env
+  behavior: merge
+  envs:
+  - env/runner.env
+
+secretGenerator:
+- name: drone-env-secret
+  behavior: merge
+  files:
+  - ./drone-env-secret.json
+  options:
+    annotations:
+      config.kubernetes.io/local-config: "true"
+- name: drone-runner-env-secret
+  behavior: merge
+  files:
+  - ./drone-runner-env-secret.json
+  options:
+    annotations:
+      config.kubernetes.io/local-config: "true"
+
+resources:
+- ./web
+- ./runner
+- ./drone-env-secret.json
+- ./drone-runner-env-secret.json
