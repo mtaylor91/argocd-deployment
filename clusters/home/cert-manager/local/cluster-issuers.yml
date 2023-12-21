@@ -35,6 +35,7 @@ spec:
     solvers:
     - selector:
         dnsZones:
+        - "mtaylor.io"
         - "home.mtaylor.io"
       dns01:
         route53:
