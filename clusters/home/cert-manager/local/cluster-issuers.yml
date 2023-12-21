@@ -16,6 +16,7 @@ spec:
         - "collectivelyintelligent.net"
         - "crossmap.dev"
         - "dev.mtaylor.io"
+        - "mtaylor.io"
       dns01:
         cloudflare:
           apiTokenSecretRef:
@@ -35,7 +36,6 @@ spec:
     solvers:
     - selector:
         dnsZones:
-        - "mtaylor.io"
         - "home.mtaylor.io"
       dns01:
         route53:
