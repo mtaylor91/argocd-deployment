@@ -49,6 +49,7 @@ metadata:
 spec:
   secretName: mtaylor-io-tls
   dnsNames:
+  - 'mtaylor.io'
   - '*.mtaylor.io'
   issuerRef:
     name: letsencrypt-prod-cloudflare

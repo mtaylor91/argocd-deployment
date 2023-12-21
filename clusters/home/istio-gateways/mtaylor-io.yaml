@@ -12,6 +12,7 @@ spec:
       number: 80
       protocol: HTTP
     hosts:
+    - 'mtaylor.io'
     - '*.mtaylor.io'
     tls:
       httpsRedirect: true
@@ -20,6 +21,7 @@ spec:
       number: 443
       protocol: HTTPS
     hosts:
+    - 'mtaylor.io'
     - '*.mtaylor.io'
     tls:
       mode: SIMPLE
