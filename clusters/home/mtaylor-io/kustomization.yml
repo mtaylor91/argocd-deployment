@@ -1,4 +1,4 @@
 namespace: mtaylor-io
 resources:
-- https://github.com/mtaylor91/mtaylor.io/deploy?ref=0.0.5
+- https://github.com/mtaylor91/mtaylor.io/deploy?ref=0.0.6
 - virtualservice.yml
