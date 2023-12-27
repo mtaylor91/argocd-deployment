@@ -10,7 +10,16 @@ spec:
   - mtaylor.io
   - www.mtaylor.io
   http:
-  - name: mtaylor-io-routes
+  - name: mtaylor-io-socket-routes
+    match:
+    - uri:
+        prefix: "/api/v1/socket"
+    route:
+    - destination:
+        host: event-service.mtaylor-io.svc.cluster.local
+        port:
+          number: 80
+  - name: mtaylor-io-web-routes
     route:
     - destination:
         host: web.mtaylor-io.svc.cluster.local

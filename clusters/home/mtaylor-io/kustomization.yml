@@ -1,4 +1,5 @@
 namespace: mtaylor-io
 resources:
+- https://github.com/mtaylor91/event-server/deploy?ref=0.0.1
 - https://github.com/mtaylor91/mtaylor.io/deploy?ref=0.0.6
 - virtualservice.yml
