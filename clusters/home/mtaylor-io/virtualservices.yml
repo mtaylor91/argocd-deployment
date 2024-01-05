@@ -2,16 +2,14 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: web
+  name: mtaylor-io
 spec:
   gateways:
   - istio-gateways/mtaylor-io
   hosts:
   - mtaylor.io
-  - www.mtaylor.io
   http:
-  - name: mtaylor-io-socket-routes
-    match:
+  - match:
     - uri:
         prefix: "/api/v1/socket"
     route:
@@ -19,9 +17,21 @@ spec:
         host: event-service.mtaylor-io.svc.cluster.local
         port:
           number: 80
-  - name: mtaylor-io-web-routes
-    route:
+  - route:
     - destination:
         host: web.mtaylor-io.svc.cluster.local
         port:
           number: 80
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: www-mtaylor-io
+spec:
+  gateways:
+  - istio-gateways/mtaylor-io
+  hosts:
+  - www.mtaylor.io
+  http:
+  - redirect:
+      authority: mtaylor.io
