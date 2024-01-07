@@ -8,7 +8,37 @@ spec:
   certificateRotateStrategy: {}
   configuration:
     developerConfiguration:
-      featureGates: []
+      featureGates:
+      - HostDisk
+      - HostDevices
+    permittedHostDevices:
+      pciHostDevices:
+      - pciVendorSelector: 10de:1e07
+        resourceName: nvidia.com/2080Ti_VGA
+      - pciVendorSelector: 10de:10f7
+        resourceName: nvidia.com/2080Ti_Audio
+      - pciVendorSelector: 10de:1ad6
+        resourceName: nvidia.com/2080Ti_USB
+      - pciVendorSelector: 10de:1ad7
+        resourceName: nvidia.com/2080Ti_Serial
+      - pciVendorSelector: 10de:2204
+        resourceName: nvidia.com/3090_VGA
+      - pciVendorSelector: 10de:1aef
+        resourceName: nvidia.com/3090_Audio
+      - pciVendorSelector: 1022:145c
+        resourceName: amd.com/USB3_Controller
+      - pciVendorSelector: 8086:7ae0
+        resourceName: intel.com/USB3_Controller
+      - pciVendorSelector: 8086:4680
+        resourceName: intel.com/iGPU
+      - pciVendorSelector: 8086:7a84
+        resourceName: intel.com/ISABridge
+      - pciVendorSelector: 8086:7ad0
+        resourceName: intel.com/Audio
+      - pciVendorSelector: 8086:7aa3
+        resourceName: intel.com/SMBus
+      - pciVendorSelector: 8086:7aa4
+        resourceName: intel.com/Serial
   customizeComponents: {}
   imagePullPolicy: IfNotPresent
   workloadUpdateStrategy: {}
