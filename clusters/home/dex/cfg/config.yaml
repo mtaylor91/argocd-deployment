@@ -24,6 +24,7 @@ oauth2:
 staticClients:
 - name: ArgoCD
   id: argocd-mtaylor-io
+  public: true
   secretEnv: ARGOCD_CLIENT_SECRET
   redirectURIs:
   - 'https://argocd.mtaylor.io/auth/callback'
