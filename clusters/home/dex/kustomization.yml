@@ -1,0 +1,29 @@
+
+configurations:
+- sealedsecrets.yml
+
+commonLabels:
+  app: dex
+
+namespace: dex
+
+configMapGenerator:
+- name: dex
+  files:
+  - cfg/config.yaml
+
+secretGenerator:
+- name: google-client
+  files:
+  - ./google-client-secret.json
+  options:
+    annotations:
+      config.kubernetes.io/local-config: "true"
+
+resources:
+- ./namespace.yml
+- ./rbac.yml
+- ./deployment.yml
+- ./service.yml
+- ./virtualservice.yml
+- ./google-client-secret.json

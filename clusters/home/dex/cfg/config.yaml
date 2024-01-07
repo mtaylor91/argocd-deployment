@@ -1,0 +1,29 @@
+issuer: https://login.mtaylor.io
+
+storage:
+  type: kubernetes
+  config:
+    inCluster: true
+
+web:
+  http: 0.0.0.0:8080
+
+connectors:
+- type: google
+  id: google
+  name: Google
+  config:
+    clientID: $GOOGLE_CLIENT_ID
+    clientSecret: $GOOGLE_CLIENT_SECRET
+    redirectURI: https://login.mtaylor.io/callback
+    org: kubernetes
+
+oauth2:
+  skipApprovalScreen: true
+
+staticClients:
+- id: example-app
+  redirectURIs:
+  - 'http://127.0.0.1:5555/callback'
+  name: 'Example App'
+  secret: ZXhhbXBsZS1hcHAtc2VjcmV0
