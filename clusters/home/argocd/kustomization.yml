@@ -3,7 +3,9 @@ configMapGenerator:
 - name: argocd-cm
   behavior: merge
   files:
+  - config/oidc.config
   - config/resource.exclusions
 resources:
-- applicationset.yml
 - ../../../argocd
+- ./applicationset.yml
+- ./dex-client-secret.json

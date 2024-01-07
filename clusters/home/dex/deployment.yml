@@ -14,6 +14,11 @@ spec:
         - serve
         - /etc/dex/cfg/config.yaml
         env:
+        - name: ARGOCD_CLIENT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: argocd-client
+              key: client-secret
         - name: GOOGLE_CLIENT_ID
           valueFrom:
             secretKeyRef:

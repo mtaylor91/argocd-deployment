@@ -22,8 +22,8 @@ oauth2:
   skipApprovalScreen: true
 
 staticClients:
-- id: example-app
+- name: ArgoCD
+  id: argocd-mtaylor-io
+  secretEnv: ARGOCD_CLIENT_SECRET
   redirectURIs:
-  - 'http://127.0.0.1:5555/callback'
-  name: 'Example App'
-  secret: ZXhhbXBsZS1hcHAtc2VjcmV0
+  - 'https://argocd.mtaylor.io/auth/callback'
