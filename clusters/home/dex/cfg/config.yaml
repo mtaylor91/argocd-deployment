@@ -27,3 +27,4 @@ staticClients:
   secretEnv: ARGOCD_CLIENT_SECRET
   redirectURIs:
   - 'https://argocd.mtaylor.io/auth/callback'
+  - 'http://localhost:8085/auth/callback'
