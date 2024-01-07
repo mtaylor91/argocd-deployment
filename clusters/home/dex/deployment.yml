@@ -29,6 +29,11 @@ spec:
             secretKeyRef:
               name: google-client
               key: client-secret
+        - name: KUBERNETES_CLIENT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: kubernetes-client
+              key: client-secret
         ports:
         - name: http
           containerPort: 8080

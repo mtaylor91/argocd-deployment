@@ -25,6 +25,12 @@ secretGenerator:
   options:
     annotations:
       config.kubernetes.io/local-config: "true"
+- name: kubernetes-client
+  files:
+  - ./kubernetes-client-secret.json
+  options:
+    annotations:
+      config.kubernetes.io/local-config: "true"
 
 resources:
 - ./namespace.yml
@@ -34,3 +40,4 @@ resources:
 - ./virtualservice.yml
 - ./argocd-client-secret.json
 - ./google-client-secret.json
+- ./kubernetes-client-secret.json
