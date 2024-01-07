@@ -5,6 +5,8 @@ configMapGenerator:
   files:
   - config/oidc.config
   - config/resource.exclusions
+  literals:
+  - url=https://argocd.mtaylor.io
 resources:
 - ../../../argocd
 - ./applicationset.yml
