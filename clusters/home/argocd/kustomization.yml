@@ -7,6 +7,10 @@ configMapGenerator:
   - config/resource.exclusions
   literals:
   - url=https://argocd.mtaylor.io
+- name: argocd-rbac-cm
+  behavior: merge
+  files:
+  - config/policy.csv
 resources:
 - ../../../argocd
 - ./applicationset.yml
