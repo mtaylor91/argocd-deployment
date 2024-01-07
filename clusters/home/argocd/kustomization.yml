@@ -11,6 +11,9 @@ configMapGenerator:
   behavior: merge
   files:
   - config/policy.csv
+  literals:
+  - policy.default=role:readonly
+  - scopes='[email]'
 resources:
 - ../../../argocd
 - ./applicationset.yml
