@@ -94,6 +94,14 @@ data:
       service: https://istio-ingressgateway-public.istio-gateways.svc.cluster.local
       originRequest:
         originServerName: mtaylor.io
+    - hostname: www.mtaylor.io
+      service: https://istio-ingressgateway-public.istio-gateways.svc.cluster.local
+      originRequest:
+        originServerName: www.mtaylor.io
+    - hostname: login.mtaylor.io
+      service: https://istio-ingressgateway-public.istio-gateways.svc.cluster.local
+      originRequest:
+        originServerName: login.mtaylor.io
     - hostname: argocd.mtaylor.io
       service: https://istio-ingressgateway-public.istio-gateways.svc.cluster.local
       originRequest:
@@ -106,8 +114,4 @@ data:
       service: https://istio-ingressgateway-public.istio-gateways.svc.cluster.local
       originRequest:
         originServerName: systemloop.mtaylor.io
-    - hostname: www.mtaylor.io
-      service: https://istio-ingressgateway-public.istio-gateways.svc.cluster.local
-      originRequest:
-        originServerName: www.mtaylor.io
     - service: http_status:503
