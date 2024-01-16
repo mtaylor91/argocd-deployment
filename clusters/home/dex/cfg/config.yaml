@@ -38,3 +38,9 @@ staticClients:
   redirectURIs:
   - 'http://localhost:8000'
   - 'http://localhost:18000'
+- name: DesktopCtl
+  id: desktopctl
+  secretEnv: DESKTOPCTL_CLIENT_SECRET
+  redirectURIs:
+  - 'https://vms.home.mtaylor.io/auth/callback'
+  - 'http://localhost:8080/auth/callback'

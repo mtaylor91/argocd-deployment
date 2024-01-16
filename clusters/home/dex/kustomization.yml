@@ -19,6 +19,12 @@ secretGenerator:
   options:
     annotations:
       config.kubernetes.io/local-config: "true"
+- name: desktopctl-client
+  files:
+  - ./desktopctl-client-secret.json
+  options:
+    annotations:
+      config.kubernetes.io/local-config: "true"
 - name: google-client
   files:
   - ./google-client-secret.json
@@ -39,5 +45,6 @@ resources:
 - ./service.yml
 - ./virtualservice.yml
 - ./argocd-client-secret.json
+- ./desktopctl-client-secret.json
 - ./google-client-secret.json
 - ./kubernetes-client-secret.json

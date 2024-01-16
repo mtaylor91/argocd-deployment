@@ -19,6 +19,11 @@ spec:
             secretKeyRef:
               name: argocd-client
               key: client-secret
+        - name: DESKTOPCTL_CLIENT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: desktopctl-client
+              key: client-secret
         - name: GOOGLE_CLIENT_ID
           valueFrom:
             secretKeyRef:
