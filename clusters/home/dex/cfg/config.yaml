@@ -43,4 +43,4 @@ staticClients:
   secretEnv: DESKTOPCTL_CLIENT_SECRET
   redirectURIs:
   - 'https://vms.home.mtaylor.io/auth/callback'
-  - 'http://localhost:8080/auth/callback'
+  - 'http://localhost:5173/auth/callback'
