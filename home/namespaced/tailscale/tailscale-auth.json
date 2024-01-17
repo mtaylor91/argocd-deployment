@@ -18,11 +18,10 @@
         "annotations": {
           "sealedsecrets.bitnami.com/namespace-wide": "true"
         }
-      },
-      "type": "Opaque"
+      }
     },
     "encryptedData": {
-      "AUTH_KEY": "AgAxlDzHs0EiY90sTU4aTlVLegAIxR44IMvHqTHpLXnJDfZoa7fOsmFkEuxkqeB1EeghA916cz0JuFIxgwFBlr5nUF2jJj1V58E3CqNUABCu+DSJoevW0PfT006s4z3ma9sjbKJFcKP8ilQPOJODUMD4VZuUBzgS+ZedUDaltmK2979VedBlSmi57DcAUJcYbQOwHYCyoHKEL52Wnhv+NaH1rHid9O4aLVy+AhUJkqkuMOeTfK9Cz2KrcmOytMto4sPtgx4ShpUeh3OGp//iyavyYvEsUYPNz8uT+9I43L8mfYnChjSzUqiv/xLu4Duf/ZIfdabpdtk2Avvf3AgcxpDpi+d2OmGHKKHMEHt1zTch18NaSeUUzCNAvZA+tPGYT+lW+S2PsY7br1qAkaJbbNXTgfujtIm8sA2A+VpsszQeT6jWCb08WITLvq3HsJUfsQvkus3B4azmh8LG+4U6GF4t6H2NZJPMxIlb0/73dVB3frX4jIesVpQcJYk75hFVgIkw0Z34/5Il8h2jJivG0jw5x6qiw623y8+/alw+lBoQwaoEzhfJ2rt/SD1AWGsxXlmHR/L0LEWf26s7LwDKF1rBppUr/Pi16j3MY1xArQBr9lpaXX2kU/GT1B7SeICmoh/DRYnk9IkehibqWeS1cuk+h03PgNlQ4ttKV5JzvT674KZ3FUBDqGgvEyD43s3aYa8vpH5GsY478KFMgzzHYZvdqH1tUCe/zV5G0Q2n/yYH3quBSz9fTQVjFx2f2t15uLyNrNxq6U1Z220="
+      "AUTH_KEY": "AgAYh806CPodSpuXTo/FsiL017jDM7UtzTsk/ISUoDJ9BftipLbe13ccSLFbEBOgAb12xqqrEy5HKC5lCBIV3/8hmI1ap1Wo/5X+SlpNxKEM0HxVFX0X+wI4Njnacmy8scqtBuNlQ1fNFuLFy+7UYwNJ5QEXkOTFhtnL4nm24omXheYRMINajJdnFWiW3BzhU932M404bkFBT+x+4ernDYgbPTnY78jKDopJHMjqbNwbl+oOJfkestHi/xW2iM/qBD4PYgrOJHpVUJCG3MiwjCc0gwbYeOqGf3Z9zHxCN7TdIHGD0FDojyeoNZ7YC1do7RcIKSbweXf5697diq4GD/rGAi9oPCtpa2Gb0U1R4EFx4FsWprYZerqQOpK0bJ7qi4m3YEVRWGjoYsUIirihw7Jqr28Wr4l6iliicgPoxLq1WHTRLsYaQHTGIoOjELLereGRFbVmnFp3jYsea6aWYLzv6RctePkeiIywR9pGzsZwYmK5CNbu2UG2418iMBbTiHQ8P8Egkb6aiqEr5naJiWaDeJGFck0WjFM7EUO1oo8Du8Z8xodZbnDQJQqC5L2iBLawwGknFqN511SPtjA4aV7K5SgiJGw2tF7uG0P52gA4ZvHGcv2jxmdVRdja/8EQKFNE7QpIUJsl6FCGqMbKevaX4vLznnuHtxc4Oq65Cr1jZfpfls2bLSxBbVu+XX6jHvFn1MxpeGxphN6l3e6HjSS4q6ddhrOUw8lOz+wPv8BxSZnzN7wvZDsyK2kBjsiL3t5bDAEGD6qRAnk="
     }
   }
 }
