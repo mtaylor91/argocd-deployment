@@ -1,0 +1,3 @@
+resources:
+- https://github.com/openebs/zfs-localpv/deploy/yamls?ref=zfs-localpv-2.4.0
+- ./storageclass.yml
