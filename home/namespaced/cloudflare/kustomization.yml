@@ -1,4 +1,7 @@
 
+configurations:
+- sealedsecrets.yml
+
 namespace: cloudflare
 
 commonLabels:
@@ -9,5 +12,14 @@ configMapGenerator:
   files:
   - ./config.yaml
 
+secretGenerator:
+- name: tunnel-credentials
+  files:
+  - ./tunnel-credentials-secret.json
+  options:
+    annotations:
+      config.kubernetes.io/local-config: "true"
+
 resources:
 - ./deployment.yml
+- ./tunnel-credentials-secret.json
