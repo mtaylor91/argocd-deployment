@@ -7468,30 +7468,30 @@ spec:
         - virt-operator
         env:
         - name: VIRT_OPERATOR_IMAGE
-          value: images.home.mtaylor.io/kubevirt/virt-operator@sha256:c087867ac54ca0ea5412f7ffb36575cf460be5cf9d881fbaf1637230e220fd3b
+          value: images.home.mtaylor.io/kubevirt/virt-operator@sha256:f7a279a71607c7e46c02f1ce42d202bf9075c877749f6e06223136113faa3ab5
         - name: WATCH_NAMESPACE
           valueFrom:
             fieldRef:
               fieldPath: metadata.annotations['olm.targetNamespaces']
         - name: VIRT_API_SHASUM
-          value: sha256:3cffca3d4c09de72e20d2077c93349098ff2ad5ca5982b7257c3fe07b3974bf6
+          value: sha256:c7aa5be6f5231f566e1e4398085f94b4e3ad25b57766196cd65738550ffe0408
         - name: VIRT_CONTROLLER_SHASUM
-          value: sha256:69a4e8b3eaaa8893ff66a25994ec1b26d8dd7e1fcc2b4a8bc64c7acc71a1b6dd
+          value: sha256:46432be1c416f794857c563b17bf3d3e1330bd5969707c03a525e2db171a916e
         - name: VIRT_HANDLER_SHASUM
-          value: sha256:7f66032189f9da6e48169e8dbe89330760ac7edec73a0713ecbdfdaf017fa73b
+          value: sha256:39f6a1ef8008aaab4af4029584e542889c57546e825f0af1d6432fc32db8e097
         - name: VIRT_LAUNCHER_SHASUM
-          value: sha256:401c1d13faf0e6ff8e5629413cf7b60ff13bd1bf3df612e0f0c2bbcb5022c335
+          value: sha256:9c568413495e63c55fa7c5bb8e0c3d418b626d9f3da471c14592add1dc76c7b5
         - name: VIRT_EXPORTPROXY_SHASUM
-          value: sha256:752424465ca5d0821b0d494e2572149b1bc842c27feab59f86b0cc08529b35ed
+          value: sha256:d266fc19f1a3089d0c5f771c74b27a00a8e22b558822a9b9cdb0968d02da2f84
         - name: VIRT_EXPORTSERVER_SHASUM
-          value: sha256:351957082bbccde91b555c8371ea508cbe1e98d4510969823db02d096bb8f7fd
+          value: sha256:f8b40432468384724477f64c57133b55901673e1086fb613d747ed0f62dcb945
         - name: GS_SHASUM
-          value: sha256:1e58288bcebaf6621ae6103da277c0fe868e82a6b2a044600419ad163eb431ca
+          value: sha256:9232464efa82585cce77e0f2463ac91e93c850ff9590abd99ee6306d7a587062
         - name: PR_HELPER_SHASUM
-          value: sha256:ce5909627a7e6f1a5f3cc446dda8c019e805942bba7c479e9889052892e9b74f
+          value: sha256:8908a49930ef425269df9be11d731dc1feba153e433772d4db4b9ea0a4d791d1
         - name: KUBEVIRT_VERSION
           value: latest
-        image: images.home.mtaylor.io/kubevirt/virt-operator@sha256:c087867ac54ca0ea5412f7ffb36575cf460be5cf9d881fbaf1637230e220fd3b
+        image: images.home.mtaylor.io/kubevirt/virt-operator@sha256:f7a279a71607c7e46c02f1ce42d202bf9075c877749f6e06223136113faa3ab5
         imagePullPolicy: IfNotPresent
         name: virt-operator
         ports:
