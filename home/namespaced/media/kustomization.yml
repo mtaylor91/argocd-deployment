@@ -13,6 +13,7 @@ resources:
 - services.yml
 - virtualservices.yml
 - volumes.yml
+- plex-claim-secret.json
 
 secretGenerator:
 - name: plex-claim
