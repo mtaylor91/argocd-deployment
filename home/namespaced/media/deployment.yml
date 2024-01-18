@@ -53,7 +53,7 @@ spec:
       - name: transmission
         image: images.home.mtaylor.io/transmission:latest
         command:
-        - /bin/bash
+        - /bin/ash
         stdin: true
         tty: true
         ports:
