@@ -1,9 +1,23 @@
-namespace: media
+
 commonLabels:
   app: media
+
+configurations:
+- sealedsecrets.yml
+
+namespace: media
+
 resources:
 - namespace.yml
 - deployment.yml
 - services.yml
 - virtualservices.yml
 - volumes.yml
+
+secretGenerator:
+- name: plex-claim
+  files:
+  - ./plex-claim-secret.json
+  options:
+    annotations:
+      config.kubernetes.io/local-config: "true"
