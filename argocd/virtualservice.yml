@@ -4,13 +4,11 @@ kind: VirtualService
 metadata:
   name: argocd-server
   annotations:
-    external-dns.alpha.kubernetes.io/hostname: 91279420-9a62-4119-a0c9-b8a0ef00a087.cfargotunnel.com
+    external-dns.alpha.kubernetes.io/target: 91279420-9a62-4119-a0c9-b8a0ef00a087.cfargotunnel.com
 spec:
   gateways:
-  - istio-gateways/home-mtaylor-io
   - istio-gateways/mtaylor-io
   hosts:
-  - argocd.home.mtaylor.io
   - argocd.mtaylor.io
   http:
   - name: argocd-routes
