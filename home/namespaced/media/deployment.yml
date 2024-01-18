@@ -52,6 +52,10 @@ spec:
           name: media
       - name: transmission
         image: images.home.mtaylor.io/transmission:latest
+        command:
+        - /bin/bash
+        stdin: true
+        tty: true
         ports:
         - containerPort: 9091
           protocol: TCP
