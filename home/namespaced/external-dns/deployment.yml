@@ -21,6 +21,7 @@ spec:
         args:
         - --source=istio-virtualservice
         - --domain-filter=mtaylor.io
+        - --exclude-domains=home.mtaylor.io
         - --provider=cloudflare
         - --cloudflare-proxied
         env:
