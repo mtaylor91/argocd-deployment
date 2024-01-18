@@ -8,6 +8,12 @@ commonLabels:
 namespace: external-dns
 
 secretGenerator:
+- name: cloudflare-credentials
+  files:
+  - cloudflare-credentials-secret.json
+  options:
+    annotations:
+      config.kubernetes.io/local-config: "true"
 - name: route53-credentials
   files:
   - route53-credentials-secret.json
@@ -20,4 +26,5 @@ resources:
 - clusterrole.yml
 - clusterrolebinding.yml
 - deployment.yml
+- cloudflare-credentials-secret.json
 - route53-credentials-secret.json

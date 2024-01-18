@@ -1,3 +1,35 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: external-dns-cloudflare
+spec:
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: external-dns
+  template:
+    metadata:
+      labels:
+        app: external-dns
+    spec:
+      serviceAccountName: external-dns
+      containers:
+      - name: external-dns
+        image: registry.k8s.io/external-dns/external-dns:v0.14.0
+        args:
+        - --source=istio-virtualservice
+        - --domain-filter=mtaylor.io
+        - --provider=cloudflare
+        - --cloudflare-proxied
+        env:
+        - name: CF_API_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: cloudflare-credentials
+              key: api-token
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -21,7 +53,6 @@ spec:
         - --source=istio-virtualservice
         - --domain-filter=home.mtaylor.io
         - --provider=aws
-        - --policy=upsert-only
         - --aws-zone-type=public
         - --registry=txt
         - --txt-owner-id=k8s.home.mtaylor.io
