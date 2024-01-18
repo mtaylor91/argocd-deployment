@@ -1,0 +1,9 @@
+namespace: media
+commonLabels:
+  app: media
+resources:
+- namespace.yml
+- deployment.yml
+- services.yml
+- virtualservices.yml
+- volumes.yml

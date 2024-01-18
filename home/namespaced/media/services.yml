@@ -1,0 +1,94 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: plex-sharing
+spec:
+  type: LoadBalancer
+  externalTrafficPolicy: Cluster
+  ports:
+  - name: plex-web
+    port: 32400
+    protocol: TCP
+  - name: plex-dlna-tcp
+    port: 32469
+    protocol: TCP
+  - name: plex-companion-roku
+    port: 8324
+    protocol: TCP
+  - name: plex-companion
+    port: 3005
+    protocol: TCP
+  - name: plex-network-discovery-4
+    port: 32414
+    protocol: UDP
+  - name: plex-network-discovery-3
+    port: 32413
+    protocol: UDP
+  - name: plex-network-discovery-2
+    port: 32412
+    protocol: UDP
+  - name: plex-network-discovery-1
+    port: 32410
+    protocol: UDP
+  - name: plex-network-discovery-0
+    port: 5353
+    protocol: UDP
+  - name: plex-dlna-udp
+    port: 1900
+    protocol: UDP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: plex-web
+spec:
+  ports:
+  - name: web
+    port: 80
+    protocol: TCP
+    targetPort: 32400
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: samba
+spec:
+  clusterIP: None
+  ports:
+  - name: samba-139
+    port: 139
+    protocol: TCP
+    targetPort: 139
+  - name: samba-445
+    port: 445
+    protocol: TCP
+    targetPort: 445
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: transmission-webui
+spec:
+  ports:
+  - name: web
+    port: 80
+    protocol: TCP
+    targetPort: 9091
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: transmission-peers
+spec:
+  ports:
+  - name: peers-tcp
+    port: 51413
+    protocol: TCP
+    targetPort: 51413
+  - name: peers-udp
+    port: 51413
+    protocol: UDP
+    targetPort: 51413
+  type: LoadBalancer
+  externalTrafficPolicy: Cluster
