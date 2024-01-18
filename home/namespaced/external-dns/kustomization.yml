@@ -1,0 +1,23 @@
+
+configurations:
+- sealedsecrets.yml
+
+commonLabels:
+  app: external-dns
+
+namespace: external-dns
+
+secretGenerator:
+- name: route53-credentials
+  files:
+  - route53-credentials-secret.json
+  options:
+    annotations:
+      config.kubernetes.io/local-config: "true"
+
+resources:
+- serviceaccount.yml
+- clusterrole.yml
+- clusterrolebinding.yml
+- deployment.yml
+- route53-credentials-secret.json
