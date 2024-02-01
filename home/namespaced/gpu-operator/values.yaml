@@ -1,5 +1,0 @@
-gpu-operator:
-  cdi:
-    enabled: true
-  driver:
-    enabled: false
