@@ -39,3 +39,21 @@ spec:
   http:
   - redirect:
       authority: mtaylor.io
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: api-mtaylor-io
+  annotations:
+    external-dns.alpha.kubernetes.io/target: 91279420-9a62-4119-a0c9-b8a0ef00a087.cfargotunnel.com
+spec:
+  gateways:
+  - istio-gateways/mtaylor-io
+  hosts:
+  - api.mtaylor.io
+  http:
+  - route:
+    - destination:
+        host: api.mtaylor-io.svc.cluster.local
+        port:
+          number: 80
