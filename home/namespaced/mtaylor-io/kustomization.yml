@@ -9,4 +9,4 @@ configMapGenerator:
     behavior: merge
     literals:
       - email=mike.charles.taylor@gmail.com
-      - public-key=2DlLPHWDpTKAv1Ir7z/k3j751lqnLcQHKy52GltSem0=
+      - public-key=GGYoznSvLoFBnlQ2Gs7AgxQgQ5qw3vS+YKTQ0divwN8=
