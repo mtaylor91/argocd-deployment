@@ -23,10 +23,10 @@ ingress:
   service: https://istio-ingressgateway-public.istio-gateways.svc.cluster.local
   originRequest:
     originServerName: www.mtaylor.io
-- hostname: api.mtaylor.io
+- hostname: iam.mtaylor.io
   service: https://istio-ingressgateway-public.istio-gateways.svc.cluster.local
   originRequest:
-    originServerName: api.mtaylor.io
+    originServerName: iam.mtaylor.io
 - hostname: login.mtaylor.io
   service: https://istio-ingressgateway-public.istio-gateways.svc.cluster.local
   originRequest:
