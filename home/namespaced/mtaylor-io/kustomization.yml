@@ -2,10 +2,10 @@ namespace: mtaylor-io
 resources:
   - https://github.com/mtaylor91/event-server/deploy?ref=0.0.15
   - https://github.com/mtaylor91/mtaylor.io/deploy?ref=0.0.14
-  - https://github.com/mtaylor91/api-mtaylor-io/deploy?ref=0.0.19
+  - https://github.com/mtaylor91/iam-mtaylor-io/deploy?ref=0.0.20
   - virtualservices.yml
 configMapGenerator:
-  - name: api-mtaylor-io
+  - name: iam-mtaylor-io
     behavior: merge
     literals:
       - email=mike.charles.taylor@gmail.com
