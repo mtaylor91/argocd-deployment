@@ -10,6 +10,8 @@ spec:
         args:
         - --postgres
         env:
+        - name: POSTGRES_DATABASE
+          value: iam-mtaylor-io
         - name: POSTGRES_HOST
           value: db.postgres.svc.cluster.local
         - name: POSTGRES_PORT
