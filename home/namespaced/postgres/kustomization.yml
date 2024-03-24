@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: postgres
+commonLabels:
+  app: postgres
+configurations:
+- sealedsecrets.yml
+resources:
+- deployment.yml
+- service.yml
+- volume.yml
+- postgres-secret.json
+secretGenerator:
+- name: postgres
+  files:
+  - ./postgres-secret.json
+  options:
+    annotations:
+      config.kubernetes.io/local-config: "true"
