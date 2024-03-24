@@ -7,6 +7,8 @@ spec:
     spec:
       containers:
       - name: iam
+        args:
+        - --postgres
         env:
         - name: POSTGRES_HOST
           value: db.postgres.svc.cluster.local
