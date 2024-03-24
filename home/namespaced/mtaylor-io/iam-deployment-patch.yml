@@ -12,6 +12,8 @@ spec:
         env:
         - name: POSTGRES_HOST
           value: db.postgres.svc.cluster.local
+        - name: POSTGRES_PORT
+          value: "5432"
         - name: POSTGRES_USER
           value: iam-mtaylor-io
         - name: POSTGRES_PASSWORD
