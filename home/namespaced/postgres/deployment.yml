@@ -3,15 +3,14 @@ kind: Deployment
 metadata:
   name: postgres
 spec:
+  replicas: 1
+  strategy:
+    type: Recreate
   template:
     spec:
       containers:
       - name: postgres
         image: docker.io/postgres:16.2
-        command:
-        - /bin/bash
-        stdin: true
-        tty: true
         env:
         - name: POSTGRES_DB
           value: postgres
@@ -27,7 +26,7 @@ spec:
           protocol: TCP
           name: postgres
         volumeMounts:
-        - mountPath: /var/lib/postgresql/data
+        - mountPath: /var/lib/postgresql
           name: postgres
       volumes:
       - name: postgres
