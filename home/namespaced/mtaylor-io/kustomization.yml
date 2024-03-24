@@ -1,6 +1,13 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: mtaylor-io
+patches:
+- path: iam-deployment-patch.yml
+  target:
+    group: apps
+    version: v1
+    kind: Deployment
+    name: iam-mtaylor-io
 resources:
   - https://github.com/mtaylor91/event-server/deploy?ref=0.0.15
   - https://github.com/mtaylor91/mtaylor.io/deploy?ref=0.0.14

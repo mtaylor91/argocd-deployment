@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iam-mtaylor-io
+spec:
+  template:
+    spec:
+      containers:
+      - name: iam
+        env:
+        - name: POSTGRES_HOST
+          value: db.postgres.svc.cluster.local
+        - name: POSTGRES_USER
+          value: iam-mtaylor-io
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: postgres
+              key: password
