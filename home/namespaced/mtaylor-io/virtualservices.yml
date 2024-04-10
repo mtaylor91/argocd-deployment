@@ -57,3 +57,20 @@ spec:
         host: iam.mtaylor-io.svc.cluster.local
         port:
           number: 80
+    corsPolicy:
+      allowOrigins:
+      - exact: "*"
+      allowMethods:
+      - POST
+      - GET
+      - PUT
+      - DELETE
+      - OPTIONS
+      allowCredentials: true
+      allowHeaders:
+      - Content-Type
+      - Authorization
+      - X-MTaylor-IO-User-Id
+      - X-MTaylor-IO-Request-Id
+      - X-MTaylor-IO-Public-Key
+      maxAge: "24h"
