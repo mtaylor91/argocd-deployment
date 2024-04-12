@@ -71,6 +71,7 @@ spec:
       - Content-Type
       - Authorization
       - X-MTaylor-IO-User-Id
-      - X-MTaylor-IO-Request-Id
       - X-MTaylor-IO-Public-Key
+      - X-MTaylor-IO-Request-Id
+      - X-MTaylor-IO-Session-Token
       maxAge: "24h"
