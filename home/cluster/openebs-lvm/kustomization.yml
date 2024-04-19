@@ -1,0 +1,3 @@
+resources:
+- https://github.com/openebs/lvm-localpv/raw/v1.5.0/deploy/lvm-operator.yaml
+- ./storageclass.yml

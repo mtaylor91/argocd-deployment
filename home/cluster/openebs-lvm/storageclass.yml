@@ -1,0 +1,13 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: openebs-lvmpv
+parameters:
+  storage: "lvm"
+  volgroup: "ssdstore"
+provisioner: local.csi.openebs.io
+allowedTopologies:
+- matchLabelExpressions:
+  - key: kubernetes.io/hostname
+    values:
+      - ahri
