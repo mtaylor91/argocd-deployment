@@ -4,6 +4,8 @@ kind: Deployment
 metadata:
   name: koboldcpp
 spec:
+  strategy:
+    type: Recreate
   template:
     spec:
       containers:
