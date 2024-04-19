@@ -25,9 +25,9 @@ spec:
           protocol: TCP
         resources:
           limits:
-            nvidia.com/gpu: 2
+            nvidia.com/gpu: 1
           requests:
-            nvidia.com/gpu: 2
+            nvidia.com/gpu: 1
         volumeMounts:
         - mountPath: /models
           name: koboldcpp-models
