@@ -1,0 +1,30 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: koboldcpp
+spec:
+  template:
+    spec:
+      containers:
+      - name: koboldcpp
+        image: images.home.mtaylor.io/koboldcpp:latest
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        resources:
+          limits:
+            nvidia.com/gpu: 2
+          requests:
+            nvidia.com/gpu: 2
+        volumeMounts:
+        - mountPath: /models
+          name: koboldcpp-models
+      tolerations:
+      - key: nvidia.com/gpu
+        operator: Exists
+        effect: NoSchedule
+      volumes:
+      - name: koboldcpp-models
+        persistentVolumeClaim:
+          claimName: koboldcpp-models
