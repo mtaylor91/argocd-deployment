@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sillytavern
+spec:
+  template:
+    spec:
+      containers:
+        - name: sillytavern
+          image: ghcr.io/sillytavern/sillytavern:release
+          ports:
+            - containerPort: 8000
+              protocol: TCP
