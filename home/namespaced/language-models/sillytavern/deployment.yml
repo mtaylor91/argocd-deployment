@@ -6,8 +6,16 @@ spec:
   template:
     spec:
       containers:
-        - name: sillytavern
-          image: ghcr.io/sillytavern/sillytavern:release
-          ports:
-            - containerPort: 8000
-              protocol: TCP
+      - name: sillytavern
+        image: ghcr.io/sillytavern/sillytavern:release
+        ports:
+        - containerPort: 8000
+          protocol: TCP
+        volumeMounts:
+        - mountPath: /home/node/app/config/config.yaml
+          subPath: config.yaml
+          name: config
+      volumes:
+      - name: config
+        configMap:
+          name: sillytavern-config
