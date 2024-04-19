@@ -8,11 +8,16 @@ spec:
     spec:
       containers:
       - name: koboldcpp
-        image: images.home.mtaylor.io/base:latest
-        command:
-        - /bin/bash
-        - -c
-        - sleep infinity
+        image: images.home.mtaylor.io/koboldcpp:latest
+        env:
+        - name: MODEL
+          value: "/models/Meta-Llama-3-8B-Instruct-Q5_K_M.gguf"
+        - name: CONTEXTSIZE
+          value: "8000"
+        - name: GPULAYERS
+          value: "33"
+        - name: THREADS
+          value: "16"
         ports:
         - containerPort: 8080
           protocol: TCP
