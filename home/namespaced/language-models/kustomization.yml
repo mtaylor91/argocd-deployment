@@ -3,3 +3,4 @@ kind: Kustomization
 namespace: language-models
 resources:
  - ./koboldcpp
+ - virtualservices.yml
