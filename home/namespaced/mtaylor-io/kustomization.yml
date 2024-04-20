@@ -11,7 +11,7 @@ patches:
 resources:
   - https://github.com/mtaylor91/event-server/deploy?ref=0.0.15
   - https://github.com/mtaylor91/mtaylor.io/deploy?ref=0.0.14
-  - https://github.com/mtaylor91/iam-mtaylor-io/deploy?ref=0.1.16
+  - https://github.com/mtaylor91/iam-mtaylor-io/deploy?ref=0.1.17
   - https://github.com/mtaylor91/admin-mtaylor-io/deploy?ref=0.0.3
   - virtualservices.yml
   - postgres-secret.json
