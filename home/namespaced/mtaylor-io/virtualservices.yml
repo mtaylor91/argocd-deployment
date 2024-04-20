@@ -28,6 +28,24 @@ spec:
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
+  name: admin-mtaylor-io
+  annotations:
+    external-dns.alpha.kubernetes.io/target: 91279420-9a62-4119-a0c9-b8a0ef00a087.cfargotunnel.com
+spec:
+  gateways:
+  - istio-gateways/mtaylor-io
+  hosts:
+  - admin.mtaylor.io
+  http:
+  - route:
+    - destination:
+        host: admin-mtaylor-io.mtaylor-io.svc.cluster.local
+        port:
+          number: 80
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
   name: www-mtaylor-io
   annotations:
     external-dns.alpha.kubernetes.io/target: 91279420-9a62-4119-a0c9-b8a0ef00a087.cfargotunnel.com
