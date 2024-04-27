@@ -22,7 +22,7 @@ configMapGenerator:
     behavior: merge
     literals:
       - email=mike.charles.taylor@gmail.com
-      - public-key=GGYoznSvLoFBnlQ2Gs7AgxQgQ5qw3vS+YKTQ0divwN8=
+      - public-key=RZkhnsiJGOopSNuHfvwK81gxOn-CpMv3GSp1sn2AIyg=
 secretGenerator:
   - name: postgres
     files:
