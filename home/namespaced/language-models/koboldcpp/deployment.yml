@@ -13,7 +13,7 @@ spec:
         image: images.home.mtaylor.io/koboldcpp:0.0.1
         env:
         - name: MODEL
-          value: "/models/Meta-Llama-3-8B-Instruct-Q5_K_M.gguf"
+          value: "/models/vicuna-13b-v1.5.Q5_K_M.gguf"
         - name: CONTEXTSIZE
           value: "8000"
         - name: GPULAYERS
