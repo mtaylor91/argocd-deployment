@@ -12,7 +12,7 @@ resources:
   - https://github.com/mtaylor91/mtaylor.io/deploy?ref=0.0.14
   - https://github.com/mtaylor91/iam-mtaylor-io/deploy?ref=0.1.41
   - https://github.com/mtaylor91/admin-mtaylor-io/deploy?ref=0.0.22
-  - https://github.com/mtaylor91/events-mtaylor-io/deploy?ref=0.0.4
+  - https://github.com/mtaylor91/events-mtaylor-io/deploy?ref=0.0.5
   - virtualservices.yml
   - events-secret.json
   - postgres-secret.json
