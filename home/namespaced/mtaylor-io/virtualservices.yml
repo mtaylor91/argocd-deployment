@@ -49,6 +49,24 @@ spec:
         host: events.mtaylor-io.svc.cluster.local
         port:
           number: 80
+    corsPolicy:
+      allowOrigins:
+      - exact: "*"
+      allowMethods:
+      - POST
+      - GET
+      - PUT
+      - DELETE
+      - OPTIONS
+      allowCredentials: true
+      allowHeaders:
+      - Content-Type
+      - Authorization
+      - X-MTaylor-IO-User-Id
+      - X-MTaylor-IO-Public-Key
+      - X-MTaylor-IO-Request-Id
+      - X-MTaylor-IO-Session-Token
+      maxAge: "24h"
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
