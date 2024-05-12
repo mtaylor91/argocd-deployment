@@ -30,6 +30,10 @@ configMapGenerator:
       - host=events.mtaylor.io
       - username=events-service
       - public-key=KnWDlcS4se8lt-g3g8gTw_k8YSd-2FXOkwnoAsH-pbM=
+      - postgres-host=db.postgres.svc.cluster.local
+      - postgres-port=5432
+      - postgres-user=mtaylor-io
+      - postgres-db=events-mtaylor-io
 secretGenerator:
   - name: events-mtaylor-io
     behavior: merge
