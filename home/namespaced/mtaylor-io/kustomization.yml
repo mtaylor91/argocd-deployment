@@ -9,7 +9,7 @@ patches:
       kind: Deployment
       name: iam-mtaylor-io
 resources:
-  - https://github.com/mtaylor91/mtaylor.io/deploy?ref=0.0.29
+  - https://github.com/mtaylor91/mtaylor.io/deploy?ref=0.1.0
   - https://github.com/mtaylor91/iam-mtaylor-io/deploy?ref=0.1.42
   - https://github.com/mtaylor91/admin-mtaylor-io/deploy?ref=0.0.25
   - https://github.com/mtaylor91/events-mtaylor-io/deploy?ref=0.1.3
