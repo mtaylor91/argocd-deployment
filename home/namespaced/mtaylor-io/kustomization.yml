@@ -11,7 +11,7 @@ patches:
 resources:
   - https://github.com/mtaylor91/mtaylor.io/deploy?ref=0.1.5
   - https://github.com/mtaylor91/iam-mtaylor-io/deploy?ref=0.1.42
-  - https://github.com/mtaylor91/admin-mtaylor-io/deploy?ref=0.1.2
+  - https://github.com/mtaylor91/admin-mtaylor-io/deploy?ref=0.1.3
   - https://github.com/mtaylor91/events-mtaylor-io/deploy?ref=0.1.19
   - virtualservices.yml
   - events-secret.json
