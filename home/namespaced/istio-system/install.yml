@@ -77,7 +77,6 @@ spec:
         enabled: false
       network: ""
       omitSidecarInjectorConfigMap: false
-      oneNamespace: false
       operatorManageWebhooks: false
       pilotCertProvider: istiod
       priorityClassName: ""
@@ -141,15 +140,8 @@ spec:
       enabled: true
       v2:
         enabled: true
-        metadataExchange:
-          wasmEnabled: false
         prometheus:
           enabled: true
-          wasmEnabled: false
         stackdriver:
-          configOverride: {}
           enabled: false
-          logging: false
-          monitoring: false
-          topology: false
 
