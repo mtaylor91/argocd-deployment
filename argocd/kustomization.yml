@@ -3,4 +3,4 @@ resources:
 - namespace.yml
 - virtualservice.yml
 - destinationrule.yml
-- https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+- https://raw.githubusercontent.com/argoproj/argo-cd/v2.11.0/manifests/install.yaml
