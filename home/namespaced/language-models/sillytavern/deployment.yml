@@ -8,6 +8,7 @@ spec:
       containers:
       - name: sillytavern
         image: ghcr.io/sillytavern/sillytavern:release
+        imagePullPolicy: Always
         ports:
         - containerPort: 8000
           protocol: TCP
