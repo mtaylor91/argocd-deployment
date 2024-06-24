@@ -6,3 +6,4 @@ basicAuthMode: true
 basicAuthUser:
   username: "mtaylor"
   password: "sillytavern"
+cookieSecret: "x/ZdWWfChN0FItx48QFGOdq1cKSnZA1Rk+Trf9E7K1NN/g8bvl/5KNsWYn9i6D7Ru3oTwBMw8CNQTJu7AkiQTA=="
