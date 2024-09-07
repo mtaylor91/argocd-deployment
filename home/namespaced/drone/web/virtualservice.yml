@@ -3,13 +3,11 @@ apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
   name: drone
-  annotations:
-    external-dns.alpha.kubernetes.io/target: 91279420-9a62-4119-a0c9-b8a0ef00a087.cfargotunnel.com
 spec:
   gateways:
-  - istio-gateways/mtaylor-io
+  - istio-gateways/home-mtaylor-io
   hosts:
-  - drone.mtaylor.io
+  - drone.home.mtaylor.io
   http:
   - name: drone-routes
     route:
