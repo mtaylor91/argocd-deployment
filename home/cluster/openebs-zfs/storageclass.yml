@@ -5,6 +5,8 @@ metadata:
     storageclass.kubernetes.io/is-default-class: "true"
   name: openebs-zfspv
 parameters:
+  fstype: "zfs"
+  shared: "yes"
   poolname: "zpool"
 provisioner: zfs.csi.openebs.io
 allowedTopologies:
