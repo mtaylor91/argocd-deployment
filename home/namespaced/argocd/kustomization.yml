@@ -7,6 +7,7 @@ configMapGenerator:
   - config/resource.exclusions
   literals:
   - url=https://argocd.mtaylor.io
+  - kustomize.buildOptions=--enable-helm
 - name: argocd-rbac-cm
   behavior: merge
   files:
