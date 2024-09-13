@@ -1,5 +1,0 @@
-namespace: "github-arc-system"
-helmCharts:
-- name: "gha-runner-scale-set-controller"
-  repo: "oci://ghcr.io/actions/actions-runner-controller-charts"
-  releaseName: "arc"
