@@ -55,3 +55,45 @@ spec:
     name: letsencrypt-prod-cloudflare
     kind: ClusterIssuer
     group: cert-manager.io
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: subval-ca
+spec:
+  secretName: subval-ca-tls
+  dnsNames:
+  - 'subval.ca'
+  - '*.subval.ca'
+  issuerRef:
+    name: letsencrypt-prod-cloudflare
+    kind: ClusterIssuer
+    group: cert-manager.io
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: subval-dev
+spec:
+  secretName: subval-dev-tls
+  dnsNames:
+  - 'subval.dev'
+  - '*.subval.dev'
+  issuerRef:
+    name: letsencrypt-prod-cloudflare
+    kind: ClusterIssuer
+    group: cert-manager.io
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: subval-net
+spec:
+  secretName: subval-net-tls
+  dnsNames:
+  - 'subval.net'
+  - '*.subval.net'
+  issuerRef:
+    name: letsencrypt-prod-cloudflare
+    kind: ClusterIssuer
+    group: cert-manager.io

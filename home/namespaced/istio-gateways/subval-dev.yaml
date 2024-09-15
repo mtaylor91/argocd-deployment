@@ -1,0 +1,28 @@
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: subval-dev
+spec:
+  selector:
+    istio: ingressgateway-public
+  servers:
+  - port:
+      name: http
+      number: 80
+      protocol: HTTP
+    hosts:
+    - 'subval.dev'
+    - '*.subval.dev'
+    tls:
+      httpsRedirect: true
+  - port:
+      name: https
+      number: 443
+      protocol: HTTPS
+    hosts:
+    - 'subval.dev'
+    - '*.subval.dev'
+    tls:
+      mode: SIMPLE
+      credentialName: subval-dev-tls

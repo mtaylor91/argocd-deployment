@@ -17,6 +17,9 @@ spec:
         - "crossmap.dev"
         - "dev.mtaylor.io"
         - "mtaylor.io"
+        - "subval.ca"
+        - "subval.dev"
+        - "subval.net"
       dns01:
         cloudflare:
           apiTokenSecretRef:

@@ -20,7 +20,6 @@ spec:
         image: registry.k8s.io/external-dns/external-dns:v0.14.0
         args:
         - --source=istio-virtualservice
-        - --domain-filter=mtaylor.io
         - --exclude-domains=home.mtaylor.io
         - --provider=cloudflare
         - --cloudflare-proxied
