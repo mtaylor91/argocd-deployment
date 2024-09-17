@@ -121,3 +121,21 @@ spec:
       - X-MTaylor-IO-Request-Id
       - X-MTaylor-IO-Session-Token
       maxAge: "24h"
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: status-mtaylor-io
+  annotations:
+    external-dns.alpha.kubernetes.io/target: 91279420-9a62-4119-a0c9-b8a0ef00a087.cfargotunnel.com
+spec:
+  gateways:
+  - istio-gateways/mtaylor-io
+  hosts:
+  - status.mtaylor.io
+  http:
+  - route:
+    - destination:
+        host: status.mtaylor-io.svc.cluster.local
+        port:
+          number: 80
