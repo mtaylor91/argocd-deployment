@@ -47,6 +47,10 @@ ingress:
   service: https://istio-ingressgateway-public.istio-gateways.svc.cluster.local
   originRequest:
     originServerName: drone.mtaylor.io
+- hostname: status.mtaylor.io
+  service: https://istio-ingressgateway-public.istio-gateways.svc.cluster.local
+  originRequest:
+    originServerName: status.mtaylor.io
 - hostname: systemloop.mtaylor.io
   service: https://istio-ingressgateway-public.istio-gateways.svc.cluster.local
   originRequest:
