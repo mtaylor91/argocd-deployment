@@ -6,7 +6,7 @@ configMapGenerator:
   - config/oidc.config
   - config/resource.exclusions
   literals:
-  - accounts.ci: apiKey, login
+  - accounts.ci=apiKey, login
   - url=https://argocd.mtaylor.io
   - kustomize.buildOptions=--enable-helm
 - name: argocd-rbac-cm
