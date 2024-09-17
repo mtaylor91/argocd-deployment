@@ -8,12 +8,18 @@ patches:
       version: v1
       kind: Deployment
       name: iam-mtaylor-io
+  - path: status-deployment-patch.yml
+    target:
+      group: apps
+      version: v1
+      kind: Deployment
+      name: status-mtaylor-io
 resources:
   - https://github.com/mtaylor91/mtaylor.io/deploy?ref=0.1.22
   - https://github.com/mtaylor91/iam-mtaylor-io/deploy?ref=0.1.54
   - https://github.com/mtaylor91/admin-mtaylor-io/deploy?ref=0.1.15
   - https://github.com/mtaylor91/events-mtaylor-io/deploy?ref=0.1.38
-  - https://github.com/mtaylor91/status.mtaylor.io/deploy?ref=0.0.2
+  - https://github.com/mtaylor91/status.mtaylor.io/deploy?ref=0.0.3
   - virtualservices.yml
   - events-secret.json
   - postgres-secret.json
@@ -35,6 +41,11 @@ configMapGenerator:
       - postgres-port=5432
       - postgres-user=mtaylor-io
       - postgres-db=events-mtaylor-io
+  - name: status-mtaylor-io
+    behavior: merge
+    literals:
+      - PGHOST=db.postgres.svc.cluster.local
+      - PGUSER=mtaylor-io
 secretGenerator:
   - name: events-mtaylor-io
     behavior: merge
@@ -46,6 +57,11 @@ secretGenerator:
   - name: postgres
     files:
       - ./postgres-secret.json
+    options:
+      annotations:
+        config.kubernetes.io/local-config: "true"
+  - name: status-mtaylor-io
+    behavior: merge
     options:
       annotations:
         config.kubernetes.io/local-config: "true"

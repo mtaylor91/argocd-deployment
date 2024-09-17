@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: status-mtaylor-io
+spec:
+  template:
+    spec:
+      containers:
+      - name: status-mtaylor-io
+        env:
+        - name: PGPASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: postgres
+              key: password
