@@ -15,11 +15,11 @@ patches:
       kind: Deployment
       name: status-mtaylor-io
 resources:
-  - https://github.com/mtaylor91/mtaylor.io/deploy?ref=0.1.22
+  - https://github.com/mtaylor91/mtaylor.io/deploy?ref=0.1.23
   - https://github.com/mtaylor91/iam-mtaylor-io/deploy?ref=0.1.55
   - https://github.com/mtaylor91/admin-mtaylor-io/deploy?ref=0.1.18
   - https://github.com/mtaylor91/events-mtaylor-io/deploy?ref=0.1.41
-  - https://github.com/mtaylor91/status.mtaylor.io/deploy?ref=0.0.7
+  - https://github.com/mtaylor91/status.mtaylor.io/deploy?ref=0.1.23
   - virtualservices.yml
   - events-secret.json
   - postgres-secret.json
