@@ -17,7 +17,7 @@ patches:
 resources:
   - https://github.com/mtaylor91/mtaylor.io/deploy?ref=0.1.22
   - https://github.com/mtaylor91/iam-mtaylor-io/deploy?ref=0.1.55
-  - https://github.com/mtaylor91/admin-mtaylor-io/deploy?ref=0.1.15
+  - https://github.com/mtaylor91/admin-mtaylor-io/deploy?ref=0.1.16
   - https://github.com/mtaylor91/events-mtaylor-io/deploy?ref=0.1.40
   - https://github.com/mtaylor91/status.mtaylor.io/deploy?ref=0.0.7
   - virtualservices.yml
