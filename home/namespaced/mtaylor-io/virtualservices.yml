@@ -139,3 +139,12 @@ spec:
         host: status.mtaylor-io.svc.cluster.local
         port:
           number: 80
+    corsPolicy:
+      allowOrigins:
+      - exact: "*"
+      allowMethods:
+      - GET
+      allowCredentials: true
+      allowHeaders:
+      - Content-Type
+      maxAge: "24h"
