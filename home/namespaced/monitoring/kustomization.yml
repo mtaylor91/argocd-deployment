@@ -1,4 +1,4 @@
 namespace: monitoring
 resources:
-- https://github.com/mtaylor91/monitoring/deploy?ref=v0.0.2
+- https://github.com/mtaylor91/monitoring/deploy?ref=v0.0.3
 - virtualservices.yml
