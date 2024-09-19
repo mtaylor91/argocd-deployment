@@ -19,7 +19,7 @@ resources:
   - https://github.com/mtaylor91/iam-mtaylor-io/deploy?ref=0.1.61
   - https://github.com/mtaylor91/admin-mtaylor-io/deploy?ref=0.1.20
   - https://github.com/mtaylor91/events-mtaylor-io/deploy?ref=0.1.41
-  - https://github.com/mtaylor91/status.mtaylor.io/deploy?ref=0.0.8
+  - https://github.com/mtaylorio/status/deploy?ref=0.0.8
   - virtualservices.yml
   - events-secret.json
   - postgres-secret.json
