@@ -22,6 +22,7 @@ resources:
   - https://github.com/mtaylorio/status/deploy?ref=0.0.9
   - virtualservices.yml
   - events-secret.json
+  - iam-secret.json
   - postgres-secret.json
 configurations:
   - sealedsecrets.yml
@@ -29,8 +30,8 @@ configMapGenerator:
   - name: iam-mtaylor-io
     behavior: merge
     literals:
-      - email=mike.charles.taylor@gmail.com
-      - public-key=RZkhnsiJGOopSNuHfvwK81gxOn-CpMv3GSp1sn2AIyg=
+      - email=iam@mtaylor.io
+      - public-key=5frb0bv5Jkh1TUWe5ZW7UNKKG-9UbEFbF4ltzIk30vs=
       - admin-email=mike.charles.taylor@gmail.com
       - admin-public-key=RZkhnsiJGOopSNuHfvwK81gxOn-CpMv3GSp1sn2AIyg=
   - name: events-mtaylor-io
@@ -53,6 +54,13 @@ secretGenerator:
     behavior: merge
     files:
       - ./events-secret.json
+    options:
+      annotations:
+        config.kubernetes.io/local-config: "true"
+  - name: iam-mtaylor-io
+    behavior: merge
+    files:
+      - ./iam-secret.json
     options:
       annotations:
         config.kubernetes.io/local-config: "true"
