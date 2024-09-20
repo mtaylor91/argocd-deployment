@@ -31,6 +31,8 @@ configMapGenerator:
     literals:
       - email=mike.charles.taylor@gmail.com
       - public-key=RZkhnsiJGOopSNuHfvwK81gxOn-CpMv3GSp1sn2AIyg=
+      - admin-email=mike.charles.taylor@gmail.com
+      - admin-public-key=RZkhnsiJGOopSNuHfvwK81gxOn-CpMv3GSp1sn2AIyg=
   - name: events-mtaylor-io
     behavior: merge
     literals:
