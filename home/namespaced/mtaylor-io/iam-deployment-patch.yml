@@ -12,6 +12,8 @@ spec:
         env:
         - name: HOST
           value: iam.mtaylor.io
+        - name: EVENTS_HOST
+          value: events.mtaylor.io
         - name: POSTGRES_DATABASE
           value: iam-mtaylor-io
         - name: POSTGRES_HOST
