@@ -1,0 +1,23 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: crossmap-dev
+configurations:
+- sealedsecrets.yml
+configMapGenerator:
+- name: crossmap-dev-api
+  behavior: merge
+  literals:
+  - POSTGRES_DB=crossmap-dev
+  - POSTGRES_HOST=db.postgres.svc.cluster.local
+  - POSTGRES_PORT=5432
+secretGenerator:
+- name: crossmap-dev-api
+  behavior: merge
+  files:
+  - ./crossmap-dev-api-secret.json
+  options:
+    annotations:
+      config.kubernetes.io/local-config: "true"
+resources:
+- https://github.com/crossmap-dev/api/deploy?ref=0.0.1
+- crossmap-dev-api-secret.json
