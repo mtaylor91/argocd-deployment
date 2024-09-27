@@ -4,20 +4,23 @@ namespace: crossmap-dev
 configurations:
 - sealedsecrets.yml
 configMapGenerator:
-- name: crossmap-dev-api
-  behavior: merge
+- behavior: merge
   literals:
   - POSTGRES_DB=crossmap-dev
   - POSTGRES_HOST=db.postgres.svc.cluster.local
   - POSTGRES_PORT=5432
+  name: crossmap-api
 secretGenerator:
-- name: crossmap-dev-api
-  behavior: merge
+- behavior: merge
   files:
-  - ./crossmap-dev-api-secret.json
+  - ./crossmap-api-secret.json
+  name: crossmap-api
   options:
     annotations:
       config.kubernetes.io/local-config: "true"
 resources:
-- https://github.com/crossmap-dev/api/deploy?ref=0.0.1
-- crossmap-dev-api-secret.json
+- https://github.com/crossmap-dev/api/deploy?ref=develop
+- crossmap-api-secret.json
+images:
+- name: images.home.mtaylor.io/crossmap-api
+  newTag: sha-b00ba90
