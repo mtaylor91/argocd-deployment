@@ -4,6 +4,7 @@ resources:
 - ./gateways/public
 - certificates.yaml
 - collectivelyintelligent.yaml
+- crossmap-app.yaml
 - crossmap-dev.yaml
 - home-mtaylor-io.yaml
 - mtaylor-io.yaml
