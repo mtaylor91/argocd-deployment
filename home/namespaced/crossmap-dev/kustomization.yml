@@ -21,6 +21,7 @@ secretGenerator:
       config.kubernetes.io/local-config: "true"
 resources:
 - https://github.com/crossmap-dev/api/deploy?ref=develop
+- virtualservices.yml
 - crossmap-api-secret.json
 images:
 - name: images.home.mtaylor.io/crossmap-api

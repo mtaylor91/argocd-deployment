@@ -15,6 +15,10 @@ no-autoupdate: true
 # from the internet to cloudflared, run `cloudflared tunnel route dns <tunnel> <hostname>`.
 # E.g. `cloudflared tunnel route dns example-tunnel tunnel.example.com`.
 ingress:
+- hostname: crossmap.dev
+  service: https://istio-ingressgateway-public.istio-gateways.svc.cluster.local
+  originRequest:
+    originServerName: crossmap.dev
 - hostname: mtaylor.io
   service: https://istio-ingressgateway-public.istio-gateways.svc.cluster.local
   originRequest:
