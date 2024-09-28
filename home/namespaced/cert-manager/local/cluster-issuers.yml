@@ -14,6 +14,7 @@ spec:
         dnsZones:
         - "collectivelyintelligent.ca"
         - "collectivelyintelligent.net"
+        - "crossmap.app"
         - "crossmap.dev"
         - "dev.mtaylor.io"
         - "mtaylor.io"
