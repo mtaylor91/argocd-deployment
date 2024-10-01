@@ -25,4 +25,4 @@ resources:
 - crossmap-api-secret.json
 images:
 - name: images.home.mtaylor.io/crossmap-api
-  newTag: sha-b4a2625
+  newTag: sha-2dab8d6
