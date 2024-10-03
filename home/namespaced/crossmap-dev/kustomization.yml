@@ -9,7 +9,7 @@ configMapGenerator:
   - POSTGRES_DB=crossmap-dev
   - POSTGRES_HOST=db.postgres.svc.cluster.local
   - POSTGRES_PORT=5432
-  - PUBLIC_KEY=o/SHgDx45Mh6KefbE8msSm9Jp9xYa1FjYhnLE7YWaHU=
+  - PUBLIC_KEY=o_SHgDx45Mh6KefbE8msSm9Jp9xYa1FjYhnLE7YWaHU=
   name: crossmap-api
 secretGenerator:
 - behavior: merge
