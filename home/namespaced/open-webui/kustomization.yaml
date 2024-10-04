@@ -2,3 +2,17 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - https://github.com/open-webui/open-webui/kubernetes/manifest/gpu?ref=v0.3.30
+- virtualservices.yaml
+patches:
+- path: ollama-statefulset-patch.yaml
+  target:
+    group: apps
+    version: v1
+    kind: StatefulSet
+    name: ollama
+- path: delete-ingress-patch.yaml
+  target:
+    group: networking.k8s.io
+    version: v1
+    kind: Ingress
+    name: open-webui-ingress
