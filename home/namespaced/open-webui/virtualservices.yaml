@@ -11,6 +11,6 @@ spec:
   http:
   - route:
     - destination:
-      host: open-webui-service.open-webui.svc.cluster.local
+        host: open-webui-service.open-webui.svc.cluster.local
         port:
           number: 8080
