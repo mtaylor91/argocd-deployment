@@ -14,3 +14,19 @@ spec:
         host: open-webui-service.open-webui.svc.cluster.local
         port:
           number: 8080
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: ollama
+spec:
+  gateways:
+  - istio-gateways/home-mtaylor-io
+  hosts:
+  - ollama.home.mtaylor.io
+  http:
+  - route:
+    - destination:
+        host: ollama-service.open-webui.svc.cluster.local
+        port:
+          number: 11434
