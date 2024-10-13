@@ -16,3 +16,19 @@ spec:
         host: api.crossmap-dev.svc.cluster.local
         port:
           number: 80
+    corsPolicy:
+      allowOrigins:
+      - exact: "*"
+      allowMethods:
+      - POST
+      - GET
+      - PUT
+      - DELETE
+      - OPTIONS
+      allowCredentials: true
+      allowHeaders:
+      - Content-Type
+      - Authorization
+      - X-Crossmap-Public-Key
+      - X-Crossmap-Request-Id
+      maxAge: "24h"
