@@ -24,6 +24,15 @@ spec:
               key: password
         - name: PGADMIN_LISTEN_PORT
           value: "8080"
+        - name: PGUSER
+          value: postgres
+        - name: PGPASS
+          valueFrom:
+            secretKeyRef:
+              name: postgres
+              key: password
+        - name: PGADMIN_CONFIG_CONFIG_DATABASE_URI
+          value: "postgresql://$(PGUSER):$(PGPASS)@db.postgres.svc.cluster.local:5432/postgres"
         ports:
         - name: http
           protocol: TCP

@@ -10,10 +10,17 @@ resources:
 - service.yml
 - virtualservice.yml
 - pgadmin-secret.json
+- postgres-secret.json
 secretGenerator:
 - name: pgadmin
   files:
   - ./pgadmin-secret.json
+  options:
+    annotations:
+      config.kubernetes.io/local-config: "true"
+- name: postgres
+  files:
+  - ./postgres-secret.json
   options:
     annotations:
       config.kubernetes.io/local-config: "true"
