@@ -1,0 +1,16 @@
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: pgadmin
+spec:
+  gateways:
+  - istio-gateways/home-mtaylor-io
+  hosts:
+  - pgadmin.home.mtaylor.io
+  http:
+  - route:
+    - destination:
+        host: web.pgadmin.svc.cluster.local
+        port:
+          number: 80
