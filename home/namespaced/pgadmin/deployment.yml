@@ -32,7 +32,7 @@ spec:
               name: postgres
               key: password
         - name: PGADMIN_CONFIG_CONFIG_DATABASE_URI
-          value: "postgresql://$(PGUSER):$(PGPASS)@db.postgres.svc.cluster.local:5432/postgres"
+          value: "'postgresql://$(PGUSER):$(PGPASS)@db.postgres.svc.cluster.local:5432/postgres'"
         ports:
         - name: http
           protocol: TCP
