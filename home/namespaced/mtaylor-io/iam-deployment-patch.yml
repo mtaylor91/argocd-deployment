@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: iam-mtaylor-io
 spec:
+  replicas: 0
   template:
     spec:
       containers:
