@@ -8,6 +8,7 @@ resources:
 - crossmap-dev.yaml
 - home-mtaylor-io.yaml
 - mtaylor-io.yaml
+- mtaylor-ca.yaml
 - subval-ca.yaml
 - subval-dev.yaml
 - subval-net.yaml
