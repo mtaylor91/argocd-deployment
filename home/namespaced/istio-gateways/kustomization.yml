@@ -11,3 +11,4 @@ resources:
 - subval-ca.yaml
 - subval-dev.yaml
 - subval-net.yaml
+- new-gtw-mtaylor-ca.yaml

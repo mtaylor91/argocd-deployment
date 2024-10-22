@@ -1,0 +1,25 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: mtaylor-ca-gateway
+spec:
+  selector:
+    istio: ingressgateway # use Istio's default gateway implementation
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "mtaylor.ca"
+    - "*.mtaylor.ca"
+  - port:
+      number: 443
+      name: https
+      protocol: HTTPS
+    tls:
+      mode: SIMPLE
+      credentialName: mtaylor-ca-tls
+    hosts:
+    - "mtaylor.ca"
+    - "*.mtaylor.ca"
