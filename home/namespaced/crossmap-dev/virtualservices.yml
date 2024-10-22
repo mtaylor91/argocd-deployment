@@ -15,7 +15,7 @@ spec:
     - destination:
         host: api.crossmap-dev.svc.cluster.local
         port:
-          number: 80
+          number: 9000
     corsPolicy:
       allowOrigins:
       - exact: "*"

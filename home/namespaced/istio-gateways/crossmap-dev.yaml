@@ -1,4 +1,3 @@
----
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
@@ -9,7 +8,7 @@ spec:
   servers:
   - port:
       name: http
-      number: 80
+      number: 9000
       protocol: HTTP
     hosts:
     - 'crossmap.dev'
