@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crossmap-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: crossmap-api
+  template:
+    metadata:
+      labels:
+        app: crossmap-api
+    spec:
+      containers:
+      - name: api
+        image: images.home.mtaylor.io/crossmap-api:latest
+        ports:
+        - name: http
+          protocol: TCP
+          containerPort: 9000
+        env:
+        - name: PORT
+          value: "9000"
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 9000
+          initialDelaySeconds: 5
+          periodSeconds: 5
