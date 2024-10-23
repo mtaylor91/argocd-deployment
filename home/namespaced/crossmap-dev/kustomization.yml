@@ -23,6 +23,8 @@ resources:
 - https://github.com/crossmap-dev/api/deploy?ref=develop
 - virtualservices.yml
 - crossmap-api-secret.json
+patchesStrategicMerge:
+- deployment-patch.yml
 images:
 - name: images.home.mtaylor.io/crossmap-api
   newTag: sha-dd40e2a

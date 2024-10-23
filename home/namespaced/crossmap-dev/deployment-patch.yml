@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crossmap-api
+spec:
+  template:
+    spec:
+      containers:
+      - name: crossmap-api
+        ports:
+        - containerPort: 9000
+        env:
+        - name: PORT
+          value: "9000"
