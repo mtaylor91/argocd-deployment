@@ -26,3 +26,16 @@ resources:
 images:
 - name: images.home.mtaylor.io/crossmap-api
   newTag: sha-dd40e2a
+patchesJson6902:
+- target:
+    group: apps
+    version: v1
+    kind: Deployment
+    name: crossmap-api
+  patch:
+    - op: replace
+      path: /spec/template/spec/containers/0/ports/0/containerPort
+      value: 9000
+    - op: replace
+      path: /spec/template/spec/containers/0/env/0/value
+      value: "9000"
