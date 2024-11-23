@@ -29,11 +29,11 @@ spec:
     protocol: TCP
     port: 8443
     targetPort: 8443
-  - name: http_portal
+  - name: http-portal
     protocol: TCP
     port: 8880
     targetPort: 8880
-  - name: https_portal
+  - name: https-portal
     protocol: TCP
     port: 8843
     targetPort: 8843
