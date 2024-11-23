@@ -5,30 +5,39 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-  - protocol: UDP
+  - name: discovery1
+    protocol: UDP
     port: 1900
     targetPort: 1900
-  - protocol: UDP
+  - name: stun
+    protocol: UDP
     port: 3478
     targetPort: 3478
-  - protocol: UDP
+  - name: syslog
+    protocol: UDP
     port: 5514
     targetPort: 5514
-  - protocol: TCP
+  - name: speedtest
+    protocol: TCP
     port: 6789
     targetPort: 6789
-  - protocol: TCP
+  - name: comms
+    protocol: TCP
     port: 8080
     targetPort: 8080
-  - protocol: TCP
+  - name: web
+    protocol: TCP
     port: 8443
     targetPort: 8443
-  - protocol: TCP
+  - name: http_portal
+    protocol: TCP
     port: 8880
     targetPort: 8880
-  - protocol: TCP
+  - name: https_portal
+    protocol: TCP
     port: 8843
     targetPort: 8843
-  - protocol: UDP
+  - name: discovery2
+    protocol: UDP
     port: 10001
     targetPort: 10001
