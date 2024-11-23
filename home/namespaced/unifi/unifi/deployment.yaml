@@ -23,6 +23,8 @@ spec:
           value: "unifi"
         - name: MONGO_HOST
           value: "mongodb"
+        - name: MONGO_PORT
+          value: "27017"
         - name: MONGO_AUTHSOURCE
           value: "admin"
         ports:
