@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
       - name: plex
-        image: docker.io/plexinc/pms-docker:1.40.1.8227-c0dd5a73e
+        image: docker.io/plexinc/pms-docker:1.41.3.9314-a0bfb8370
         env:
         - name: PLEX_CLAIM
           valueFrom:
