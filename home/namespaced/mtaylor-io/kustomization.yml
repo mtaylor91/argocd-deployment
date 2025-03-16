@@ -15,7 +15,7 @@ patches:
       kind: Deployment
       name: status-mtaylor-io
 resources:
-  - https://github.com/mtaylorio/mtaylor.io/deploy?ref=0.1.27
+  - https://github.com/mtaylorio/mtaylor.io/deploy?ref=0.1.28
   - https://github.com/mtaylorio/iam-server/deploy?ref=0.1.81
   - https://github.com/mtaylorio/admin.mtaylor.io/deploy?ref=0.1.24
   - https://github.com/mtaylorio/events-server/deploy?ref=0.1.57
