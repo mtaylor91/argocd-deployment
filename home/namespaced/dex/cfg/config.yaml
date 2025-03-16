@@ -38,6 +38,7 @@ staticClients:
   redirectURIs:
   - 'http://localhost:8000'
   - 'http://localhost:18000'
+  - 'https://kubenav.io/auth/oidc.html'
 - name: DesktopCtl
   id: desktopctl
   secretEnv: DESKTOPCTL_CLIENT_SECRET
