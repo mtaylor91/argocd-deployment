@@ -4,19 +4,24 @@
   "metadata": {
     "name": "cert-manager-dns01-cloudflare",
     "namespace": "cert-manager",
-    "creationTimestamp": null
+    "creationTimestamp": null,
+    "annotations": {
+      "sealedsecrets.bitnami.com/namespace-wide": "true"
+    }
   },
   "spec": {
     "template": {
       "metadata": {
         "name": "cert-manager-dns01-cloudflare",
         "namespace": "cert-manager",
-        "creationTimestamp": null
-      },
-      "type": "Opaque"
+        "creationTimestamp": null,
+        "annotations": {
+          "sealedsecrets.bitnami.com/namespace-wide": "true"
+        }
+      }
     },
     "encryptedData": {
-      "api-token": "AgCEIp81VQkXe9jpGxB5FG7Tk/ULDJt2A0VjvNKPkFZeItN+co8xeLsE40ZXXvhJhEPGw8pNv4wJzzxSos29jNyPNrni1DruOZaweuVTQk/qBL3N6SziOr0mXduAkQonpMEBDVwY/FxDh1uoqX9TvrOufudiAGicDDifP2R8laO5hWyiAHU8WNkjO+j4ERIol82T4fqUJwshgVn7Hn2g9dyy7TtfvZlpdRyuNRu1+j2u6+QuN9nP9XG5OdSE2kPNxU7VzY+tmDVHT+Brvm3uOoBofXgZx3BQK6UoS6YN6KtFRfyY0dsAEKFLTLQe54esr87ix0fgN+/I/YtV1wH1IKSaKj8lwGBH0UftFvg6DbBV/PuHnW+GGkao+xtgbwSBVlemKEjNXzGT0FeUleOz1bKN1aQBkp9uwvcdxr1FPw2S2bxn6q6/vBpikmOD1TzI4xqahXfIIeYBfPn8LxT9Yc+S1CLUv7Igfk8UGgFGvQOHBvL/NI1e6eFQgj/nvLqRm/svqTWZ48IPmnHSHP27W8SymgdN09qFDPyKy6tBwgOI0a98GN+o8+dDJHuq6lNNDf5ew0jo7/hkUfeyumJJIaHyGT2gVi4SpdMdzMD4IvcKCw8iIMVsgDe91+meMRug6dQh1f+sOx7+pG30vS1uiQbz83tpxDLIRAZDkHu6lLxDxuBSZdOornulVB3MXR9+eAXimk3VmUxWwcRAW5NYH9MVLCIZovZH0h131t434o7mceh00DFGOZxT"
+      "api-token": "AgCumMR8GZ17Sdbq2StRpSWyU9thO8ijuLVuu8gUOdEwMEHQjg6qsnDIHVh1iqguahr6AKdCevo/EtD9HBaozlW0ZEIzHqp5f802Aqg81b93RP0wYQv7YEdib9+lliIeMwu4Kjnvs/+gSVUryDanmWNGAsLXMxtMdufu5w0GZ3ZaHXHMzZ/0WkxpwMJfc1XjXqDxgCqfI9n4MikoIaSiRqixLcr2A1/6F/R2ACF0HhxRDP1YA+zMDIpGSUxDdn91+3P9APWxKd+eCPpHYmqq5ET1ZOpkxCwL5IKIMKsn9y/2LAxpeeJW/tCHYaivUHN+Dzdgwb0ESMlRreKx7IYCIIpCDGntjLranZ2gcYZHRnoFvbtZPESWQ2YkwdcnHunPH/Awwggu1uQqSP1Fp9THu5QJdJCcijZyg4btRneC3M+Gmb9plVH91rZvAwyXm/D7SoM09C+uFVEcW94kSOCp2PJ41pCzjgBPjfL/8IT4bicSdsKq9TgWS2Ry6xq63Zm0l/vzkJ+rIuCJGaYFxKQMCOCMgkR1Ff+9fe4mwZSMOCABiUtkT5tpM9xL30PizBeRXajDexko1IkdglMJ5mFJFAh9X/jswrulRM8xn8uDp1/IOI7g6DI1B4UQwwjZfC8WWqWr1LaXewLK7+9pqbfb+X6knjqF3yqWVNTR6PsjWOTOz9NOjGJAYUUGY5+l6zNN3tqxC4huH4Vx9V6tU51e5Na+1dkbYX+kDOsCfzsijztrrJ6d/xOZKGdl"
     }
   }
 }
