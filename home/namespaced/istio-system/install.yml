@@ -22,7 +22,7 @@ spec:
       proxyMetadata: {}
     enablePrometheusMerge: true
   profile: default
-  tag: 1.20.1
+  tag: 1.25.2
   values:
     base:
       enableCRDTemplates: false
@@ -119,7 +119,6 @@ spec:
         lightstep: {}
         stackdriver: {}
         zipkin: {}
-      useMCP: false
     istiodRemote:
       injectionURL: ""
     pilot:
